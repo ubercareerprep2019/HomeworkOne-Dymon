@@ -4,7 +4,7 @@ public class isPermutation {
 	public static void main(String[] args) 
 	{
 	
-	 Boolean result =isStringPermuatation("a", "a");
+	 Boolean result =isStringPermuatation("dymon", "dmyno");
 	                 //isStringPermuatation("abb", "baa"); Wrong output
 		
      if(result == true)
