@@ -20,12 +20,12 @@ public class Stack {
 		{
 			dataStore.add(x);
 			topofStack = 0;
-			System.out.println("initial Stack stuff");
+		
 			
 		}else {
 			topofStack++;
 			dataStore.add(topofStack, x);
-			System.out.println("Stack stuff");
+
 			
 			
 		}
@@ -47,6 +47,7 @@ public class Stack {
 	
 	public int top()
 	{
+		//Needs implementation
 		return 0;
 	}
 	
@@ -69,18 +70,19 @@ public class Stack {
 		Stack data = new Stack();
 		
 		data.push(1);
-		
 		System.out.println(data.dataStore.size());
 		data.push(2);
 		data.push(3);
 		data.push(4);
 		data.push(64);
-		//System.out.println(data.dataStore.size());
+	
 		System.out.println(data.pop());
 		System.out.println(data.pop());
 		System.out.println(data.pop());
 		System.out.println(data.pop());
+		
 		//System.out.println(data.top());
+		
 		System.out.println(data.isEmpty());
 	}
 }
