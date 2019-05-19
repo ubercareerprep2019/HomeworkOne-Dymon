@@ -60,14 +60,11 @@ public class Stack {
 	
 	public boolean isEmpty()
 	{
-		boolean result;
+		boolean result = false;
 		if(dataStore.isEmpty())
 		{
 			result = true;
-		}else {
-			result= false;
 		}
-		
 		return result;
 	}
 	
