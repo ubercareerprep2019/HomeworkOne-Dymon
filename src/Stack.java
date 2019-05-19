@@ -47,8 +47,15 @@ public class Stack {
 	
 	public int top()
 	{
-		//Needs implementation
-		return 0;
+		int top  = 0;
+		if(dataStore.isEmpty())
+		{
+			return 0;
+		}
+		
+		top = (int) dataStore.get(topofStack);
+		return top;
+		
 	}
 	
 	public boolean isEmpty()
@@ -68,22 +75,17 @@ public class Stack {
 	public static void main(String agrs[])
 	{
 		Stack data = new Stack();
+		int poppedValue; 
+		data.push(42);
+		System.out.println("Printing the top of the stack after a push: " + data.top());
+		System.out.println("Printing size: "+ data.dataStore.size());
+		poppedValue = data.pop();
+		System.out.println("Printing the popped value: " + poppedValue);
+		System.out.println("Printing size: "+ data.dataStore.size());
 		
-		data.push(1);
-		System.out.println(data.dataStore.size());
-		data.push(2);
-		data.push(3);
-		data.push(4);
-		data.push(64);
-	
-		System.out.println(data.pop());
-		System.out.println(data.pop());
-		System.out.println(data.pop());
-		System.out.println(data.pop());
 		
-		//System.out.println(data.top());
 		
-		System.out.println(data.isEmpty());
+		
 	}
 }
 
