@@ -194,6 +194,11 @@ public class Hanoi {
 			
 		}
 		
+		default:
+		{	String answer;
+			System.out.print("Would you like to continue?:");
+		}
+		
 		}
 	}
 	
