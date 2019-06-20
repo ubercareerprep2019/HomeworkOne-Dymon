@@ -91,7 +91,7 @@ public class Hanoi {
 		{
 			destination.rod.add(saveTop);
 			 destination.numDisk++;
-			System.out.println("Nothing on rod");
+			
 		}else
 		{
 			 saveTopofDestination = (Disk) destination.rod.get(i);
@@ -100,10 +100,9 @@ public class Hanoi {
 			 {
 				 other.rod.add(saveTop);
 				 other.numDisk++;
-				 System.out.println("I am larger");
+				 
 			 }else {
 				 destination.rod.add(saveTop);
-				 System.out.println("I am smaller");
 				 destination.numDisk++;
 			 }
 		}
