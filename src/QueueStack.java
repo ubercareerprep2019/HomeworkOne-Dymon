@@ -3,6 +3,7 @@ public class QueueStack {
 	
 	Stack queue = new Stack();
 	int topofQ = -1;
+	
 	public void enqueue(int x)
 	{
 			if(queue.isEmpty())

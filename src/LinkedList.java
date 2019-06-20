@@ -1,8 +1,10 @@
+import java.util.Queue;
+import java.util.Stack;
 public class LinkedList<T> {
-
 	Node head; 
 	Node tail;
 	int size;
+
 	
 	public LinkedList()
 	{
@@ -15,32 +17,16 @@ public static void main(String agrs[])
 {
 
 	LinkedList mylist = new LinkedList();
+	mylist.pushBack("m");
 	mylist.pushBack("a");
-	mylist.pushBack("b");
-	mylist.pushBack("c");
 	mylist.pushBack("d");
-	System.out.println("My current size is" + mylist.getSize());
+	mylist.pushBack("a");
+	mylist.pushBack("m");
 
-	System.out.println("My element 1:" + mylist.elementAt(0));
-	System.out.println("My element 2:" + mylist.elementAt(1));
-	System.out.println("My element 3:" + mylist.elementAt(2));
-	System.out.println("My element 4:" + mylist.elementAt(3));
 	
-	mylist.insert(2,8);
-	mylist.insert(3,18);
-	mylist.erase(4);
-	mylist.popBack();
-	System.out.println("After updates");
-	System.out.println("My element 1:" + mylist.elementAt(0));
-	System.out.println("My element 2:" + mylist.elementAt(1));
-	System.out.println("My element 3:" + mylist.elementAt(2));
-	System.out.println("My element 4:" + mylist.elementAt(3));
-
-
-	System.out.println("My current size is" + mylist.getSize());
-	
+	//System.out.println(mylist.hasCycle());
+	System.out.println(mylist.isPalindrome());
 }
-
 
 public void pushBack( T element) 
 {
@@ -194,6 +180,56 @@ public void insert(int index, T element){
 	}
 	
 }
+public boolean isPalindrome()
+{
+	Stack reservedPattern = new Stack();
+	Stack pattern = new Stack();
+	Node pointer = head;
+	Node headPointer = head;
+	while(pointer != null)
+	{
+		pattern.push(pointer);
+		reservedPattern.push(pointer);
+		pointer = pointer.next;
+	
+	}
+	for(int i = size-1; i > 0; i--)
+	{
+		Node save = (Node) pattern.get(i);
+		if(headPointer.data != save.data)
+		{
+			return false;
+		}
+			headPointer = headPointer.next;
+		
+	}
+	return true;
+	
+}
+
+public boolean hasCycle() {
+	Node pointer = head;
+	boolean result = false;
+	Stack cycleStack = new Stack();
+	
+	if(head == null)
+	{
+		result = false;
+	}else {
+		
+		while(pointer != null)
+		{
+
+			cycleStack.add(pointer);
+			pointer = pointer.next;
+		}
+		for(int i = 0; i < cycleStack.size(); i++)
+		{ 
+		}
+	}
+	return false;
+}	
+
 
 }
 

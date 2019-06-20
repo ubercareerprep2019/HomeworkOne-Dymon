@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public class Stack {
 
 	int topofStack = -1;
-	ArrayList dataStore = new ArrayList();
+	 ArrayList dataStore = new ArrayList();
 
 	
 	

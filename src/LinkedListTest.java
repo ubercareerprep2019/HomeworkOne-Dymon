@@ -75,5 +75,7 @@ class LinkedListTest {
 		assertEquals(4,instance.getSize());
 		
 	}
+	
+	
 
 }
