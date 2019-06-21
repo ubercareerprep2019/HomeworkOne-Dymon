@@ -19,16 +19,7 @@ public class Hanoi {
 	
 	public static void main(String agrs[])
 	{
-		Hanoi game = new Hanoi(3);
-		Disk diskOne = new Disk(1);
-		Disk diskTwo = new Disk(2);
-		Disk diskThree = new Disk(3);
-		
-		game.firstRod.rod.add(diskOne);
-		game.firstRod.rod.add(diskTwo);
-		game.firstRod.rod.add(diskThree);
-		game.moveDisk(1, 2);
-		
+		Hanoi game = new Hanoi(3);	
 		game.playGame();
 
 		
@@ -83,14 +74,13 @@ public class Hanoi {
 			other = firstRod;
 		}
 		
-		System.out.println("size:" + start.rod.size());
 		saveTop  = (Disk) start.rod.get(i);
 		
 		if(destination.rod.size() == 0)
 		{
 			destination.rod.add(saveTop);
-			 destination.numDisk++;
-			System.out.println("Nothing on rod");
+			
+			
 		}else
 		{
 			 saveTopofDestination = (Disk) destination.rod.get(i);
@@ -98,12 +88,10 @@ public class Hanoi {
 			 if(saveTop.priority > saveTopofDestination.priority)
 			 {
 				 other.rod.add(saveTop);
-				 other.numDisk++;
-				 System.out.println("I am larger");
+			
 			 }else {
 				 destination.rod.add(saveTop);
-				 System.out.println("I am smaller");
-				 destination.numDisk++;
+				 
 			 }
 		}
 		
@@ -124,7 +112,6 @@ public class Hanoi {
 		for(int i = 0; i< index.rod.size()-1; i++)
 		{
 			myList[i] = (Disk) currentRod.rod.get(i);
-		//System.out.println(myList[i].priority);
 		}
 		return myList;
 		
