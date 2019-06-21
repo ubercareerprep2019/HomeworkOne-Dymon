@@ -1,3 +1,4 @@
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
@@ -79,7 +80,11 @@ public class Hanoi {
 		if(destination.rod.size() == 0)
 		{
 			destination.rod.add(saveTop);
+<<<<<<< HEAD
 			
+=======
+			 destination.numDisk++;
+>>>>>>> 2744b60ab5dbb463ed8594d5fc314bd3c643d052
 			
 		}else
 		{
@@ -88,10 +93,18 @@ public class Hanoi {
 			 if(saveTop.priority > saveTopofDestination.priority)
 			 {
 				 other.rod.add(saveTop);
+<<<<<<< HEAD
 			
 			 }else {
 				 destination.rod.add(saveTop);
 				 
+=======
+				 other.numDisk++;
+				 
+			 }else {
+				 destination.rod.add(saveTop);
+				 destination.numDisk++;
+>>>>>>> 2744b60ab5dbb463ed8594d5fc314bd3c643d052
 			 }
 		}
 		
